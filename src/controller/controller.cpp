@@ -19,7 +19,7 @@ void Controller::UpdateLabel(QLabel *label) {
 void Controller::ClearInput() { _model->ClearStringInput(); }
 
 std::string Controller::CalculateResult(double x) {
-  if (!_model->BracketsEquality() || !_model->CheckMultyplyPoints()) return "Syntax Error";
+  if (!_model->CheckMultyplyPoints() || !_model->ValidateInput()) return "Syntax Error";
   PolishNotation pn(_model->GetInputString());
   return std::to_string(pn.calculate(x));
 }

@@ -1,6 +1,7 @@
 #include "model.h"
 
 #include <iostream>
+#include <stack>
 
 namespace s21 {
 
@@ -417,8 +418,54 @@ double PolishNotation::calculate(double x) {
   return res;
 }
 
-bool Model::ValidateInput() {
+
+bool ifOperator(char c) {
+    if (c == '+' || c == '-' || c == '*' || c == '/') return true;
+    return false;
+}
+
+bool validateOperators(char c) {
+    if (c == ' ') {
+            return true;
+        } else if(!(isdigit(c) || c == '.' || ifOperator(c) || c == '(' || c == ')')) {
+        return false;
+    }
     return true;
+}
+
+bool validateDuplicateOperators(char cur, char prev) {
+    if(ifOperator(cur) && ifOperator(prev)) return false;
+    return true;
+}
+
+bool validateParentheses(char c, std::stack<char> &parentheses) {
+    //Проверка баланса скобок.
+    if (c == '('){
+        parentheses.push('(');
+    } else if (c == ')') {
+        if(parentheses.empty() || parentheses.top() != '('){
+            return false;
+        }
+        parentheses.pop();
+    }
+    return true;
+}
+
+bool Model::ValidateInput() {
+    std::stack<char> parentheses;
+    char prev = ' ';
+    for (auto &c: _input){
+        if(!validateOperators(c) || !validateDuplicateOperators(c, prev) || !validateParentheses(c, parentheses)) {
+            return false;
+        }
+        prev = c;
+    }
+    //Если нет баланса в количестве скобок.s
+    if(!parentheses.empty()) return false;
+
+
+    return true;
+
 }
 
 

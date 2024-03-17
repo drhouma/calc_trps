@@ -21,7 +21,7 @@ class Model {
 
   void PrintUnary(std::string source);
 
-  bool BracketsEquality();
+ // bool BracketsEquality();
 
   const std::string &GetInputString();
 
