@@ -417,4 +417,12 @@ double PolishNotation::calculate(double x) {
   return res;
 }
 
+bool Model::ValidateInput() {
+    return true;
 }
+
+
+
+
+}
+

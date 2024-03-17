@@ -30,10 +30,6 @@ class Model {
 };
 
 
-bool ValidateInput() {
-    return true;
-}
-
 // calculating class
 class PolishNotation {
  private:
