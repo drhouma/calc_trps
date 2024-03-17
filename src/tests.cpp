@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "model.h"
+#include "model/model.h"
 
 #define EPS 0.000001
 
