@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8
+\usepackage[russian]{babel}  % Включаем пакет для поддержки русского языка
+\title{S21 Calculator 2.0}
+\date{}
+\author{sreanna}
+
+\begin{document}
+  \maketitle
+  \section{Introduction}
+
+  Привет пир! Данный мануал поможет тебе в изучении программного инструментала S21 Calculator 2.0.
+
+  S21 Calculator 2.0 предоставляет вам уникальную возможность производить вычисления с точностью до 7 символов после запятой.
+
+  При желании можно вывести график функции, об этом подробнее в пункте Graphs.
+
+  \section{Makefile}
+  Для использования Makefile перейдите в папку C7_SmartCalc_v1.0-0/src
+  \begin{enumerate} 
+    \item Makefile
+      \begin{enumerate} 
+          \item make install - Устанавливает s21_calculator.exe в папку s21_calculator
+          \item make uninstall - Удаляет s21_calculator.exe
+          \item make dvi - создает и открывает техдокументацию
+          \item make dist - архивирует проект, и помещает его в папку s21_calculator
+          \item make tests - тесты на вычисляющую часть калькулятора
+          \item make gcov_report - отчет по покрытию тестов tests
+      \end{enumerate}
+  \end{enumerate}
+  \section{Graphs}
+
+  \begin{enumerate}
+    \item Введите функцию, которую вы хотите отрисовать
+    \item Нажмите кнопку graph
+    \item Введите область значений функции в полях xMin и xMax
+    \item Нажмите кнопку plot
+  \end{enumerate}
+  
+  \newline
+\end{document}
