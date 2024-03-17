@@ -26,6 +26,8 @@ set(PROJECT_SOURCES
         interface/mainwindow.h
         model/model.cpp
         model/model.h
+        model/number.cpp
+        model/number.h
 #        model/qcustomplot.cpp
 #        model/qcustomplot.h
         graphwindow.ui
