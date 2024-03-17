@@ -26,7 +26,13 @@ class Model {
   const std::string &GetInputString();
 
   bool CheckMultyplyPoints();
+  bool ValidateInput();
 };
+
+
+bool ValidateInput() {
+    return true;
+}
 
 // calculating class
 class PolishNotation {

@@ -267,6 +267,7 @@ void PolishNotation::ConvertToPolish() {
     result += ' ';
     operationStack.pop();
   }
+  printf("%s\n", result.c_str());
   _pn = result;
 }
 
