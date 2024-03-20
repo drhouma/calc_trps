@@ -24,10 +24,13 @@ set(PROJECT_SOURCES
         interface/main.cpp
         interface/mainwindow.cpp
         interface/mainwindow.h
+        model/complex.inl
+        model/fraction.inl
         model/model.cpp
         model/model.h
         model/number.cpp
         model/number.h
+        model/p_numbers.inl
 #        model/qcustomplot.cpp
 #        model/qcustomplot.h
         graphwindow.ui
