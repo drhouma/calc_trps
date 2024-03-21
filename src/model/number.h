@@ -9,6 +9,56 @@
 // get/set Number(std::stirng)
 
 
+template <class T>
+class Number {
+private:
+    T m_number;
+public:
+    Number(const T &number) {
+        m_number = number;
+    }
+
+    Number() = delete;
+
+    Number& operator=(const Number &other) {
+        //проверка на самоприсваивание
+        if (this == &other) {
+            return *this;
+        }
+        m_number = other.m_number;
+        return *this;
+    }
+
+    Number operator+(const Number &other) {
+        return Number(m_number + other.m_number);
+    }
+
+    Number operator-(const Number &other) {
+        return Number(m_number - other.m_number);
+    }
+
+    Number operator*(const Number &other) {
+        return Number(m_number * other.m_number);
+    }
+
+    Number operator/(const Number &other) {
+        return Number(m_number / other.m_number);
+    }
+
+    Number pow(const double power) {
+        return Number(m_number.pow(power));
+    }
+
+    Number sqrt(const double power) {
+        return Number(m_number.sqrt(power));
+    }
+
+    std::string GetNumber() {
+        return m_number.GetNumber();
+    }
+};
+
+
 class PNumber {
 private:
     int m_accuracy{0};
@@ -45,6 +95,7 @@ private:
     inline FractionNumber ReduceNumenators();
 
 public:
+    FractionNumber() {}
     inline FractionNumber(const int numenator, const int denumenator);
     inline void SetNumber(const std::string &str);
     inline std::string GetNumber();

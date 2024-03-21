@@ -28,8 +28,8 @@ set(PROJECT_SOURCES
         model/fraction.inl
         model/model.cpp
         model/model.h
-        model/number.cpp
         model/number.h
+        model/number.inl
         model/p_numbers.inl
 #        model/qcustomplot.cpp
 #        model/qcustomplot.h

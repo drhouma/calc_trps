@@ -102,6 +102,11 @@ FractionNumber FractionNumber::ReduceNumenators() {
 }
 
 
+inline std::string FractionNumber::GetNumber() {
+    return std::to_string(m_numenator) + '/' + std::to_string(m_denumenator);
+}
+
+
 inline void FractionNumber::print() {
     std::cout << m_numenator << '/' << m_denumenator << '\n';
 }
