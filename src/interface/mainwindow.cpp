@@ -109,7 +109,7 @@ void MainWindow::on_power_clicked() { this->NumberButtonClicked(ui->power); }
 
 void MainWindow::OperButtonClicked(QPushButton *button) {
   QString buttonName = button->text();
-  _controller->UpdateInputString(' ' + buttonName.toStdString() + ' ');
+  _controller->UpdateInputString(buttonName.toStdString());
   _controller->UpdateLabel(ui->InputString);
 }
 

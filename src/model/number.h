@@ -58,7 +58,6 @@ public:
     }
 };
 
-
 class PNumber {
 private:
     int m_accuracy{0};
@@ -67,6 +66,9 @@ private:
 public:
     inline PNumber(unsigned accuracy, double number);
     inline void SetNumber(const std::string &str);
+
+    inline PNumber& operator=(const PNumber &other);
+
 
     inline PNumber operator+(const PNumber &other);
 
@@ -128,6 +130,29 @@ public:
     ComplexNumber(const double r, const double im);
     void SetNumber(const std::string &str);
     std::string GetNumber();
+
+    inline ComplexNumber& operator=(const ComplexNumber &other);
+
+
+    inline ComplexNumber operator+(const ComplexNumber &other);
+
+    inline ComplexNumber operator-(const ComplexNumber &other);
+
+    inline ComplexNumber operator*(const ComplexNumber &other);
+
+    inline ComplexNumber operator/(const ComplexNumber &other);
+
+//    PNumber& pow(const PNumber &other);
+
+    inline ComplexNumber pow(const double power);
+
+    // returns argument of complex number
+    inline double arg();
+
+    inline ComplexNumber FormulaMuavra(const double power);
+    inline ComplexNumber FormulaMuavra(const ComplexNumber& power);
+    inline ComplexNumber sqrt();
+
 };
 inline int NOD(int n1, int n2);
 inline int NOK(int n1, int n2);

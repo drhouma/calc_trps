@@ -29,7 +29,7 @@ set(PROJECT_SOURCES
         model/model.cpp
         model/model.h
         model/number.h
-        model/number.inl
+#        model/number.inl
         model/p_numbers.inl
 #        model/qcustomplot.cpp
 #        model/qcustomplot.h
